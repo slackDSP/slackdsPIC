@@ -1,5 +1,5 @@
 /* 
- * File:   pic33test_main.c
+ * File:   slackdsp_main.c
  * Author: ian
  *
  * Created on December 29, 2013, 3:20 PM
