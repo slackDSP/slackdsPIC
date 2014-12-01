@@ -284,10 +284,8 @@ signed int pitchshift(unsigned int s_shift, signed int s_in) {
 
     env = (writeaddress - readaddress) << 5;
     if (env < 0)
-        env = env * -1;
-    if (env == -32768)
-        env = 32767;
-
+        env = ~env;
+    
     sample1 = buffer[readaddress];
     sample2 = buffer[((readaddress + (slength / 2)) & (slength - 1))];
     sample1 = mulx(sample1, env);
